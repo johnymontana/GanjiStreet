@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ganji Street</title>
+    <script src="libs/three.min.js"></script>
+    <script src="libs/RequestAnimationFrame.js"></script>
+    <script>
+
+    var renderer = null,
+        scene = null,
+        camera = null,
+        cube = null,
+        cube2 = null,
+        animating = false;
+
+    function onLoad()
+    {
+        // Grab our container div
+        var container = document.getElementById("container");
+        // Create the Three.js renderer, add it to our div
+        renderer = new THREE.WebGLRenderer({antialias: true});
+        renderer.setSize(container.offsetWidth, container.offsetHeight);
+        container.appendChild( renderer.domElement );
+        // Create a new Three.js scene
+        scene = new THREE.Scene();
+        // Create a camera and add it to the scene
+        camera = new THREE.PerspectiveCamera( 45,
+            container.offsetWidth / container.offsetHeight, 1, 4000 );
+        camera.position.set( 5, 3, 20 );
+        
+        var light = new THREE.DirectionalLight(0xffffff, 1.5);
+        light.position.set(0, 0, 1);
+
+        
+        scene.add( light );
+        
+        // Now, create a rectangle and add it to the scene
+        var geometry = new THREE.CubeGeometry(1, 1, 3);
+        //var geometry2 = new THREE.CubeGeometry(1, 1, 2.5);
+
+        //var mesh = new THREE.Mesh( geometry,
+        //    new THREE.MeshBasicMaterial( ) );
+        var i = 0;
+        var rows = 7;
+
+        for (i=0; i<rows; i++)
+        {
+        
+        cube = new THREE.Mesh(geometry);
+        cube2 = new THREE.Mesh(geometry);
+        cube3 = new THREE.Mesh(geometry);
+        cube2.position.x += 1
+        cube3.position.x += 2
+        cube.position.y += i
+        cube2.position.y += i
+        cube3.position.y += i
+
+        if (i%2==0)
+        {
+            cube.rotation.y = Math.PI / 2;
+            cube.position.z -= 1;
+            cube.position.x += 1;
+            cube2.rotation.y = Math.PI / 2;
+            cube3.rotation.y = Math.PI / 2;
+            cube3.position.z += 1;
+            cube3.position.x -= 1;
+
+        }
+        
+        //cube.rotation.x = Math.PI / 5;
+        //cube.rotation.y = Math.PI / 5;
+        //cube2.rotation.x = Math.PI / 5;
+        //cube2.rotation.y = Math.PI / 5;
+        
+       // cube2.position.x += 1;
+        
+        
+        scene.add( cube );
+        scene.add(cube2);
+        scene.add(cube3);
+
+        }
+// Render it
+        for (i=0; i<rows; i++)
+        {
+        
+        cube = new THREE.Mesh(geometry);
+        cube.position.x += 5
+        cube2 = new THREE.Mesh(geometry);
+        cube3 = new THREE.Mesh(geometry);
+        cube2.position.x += 6
+        cube3.position.x += 7
+        cube.position.y += i
+        cube2.position.y += i
+        cube3.position.y += i
+
+        if (i%2==0)
+        {
+            cube.rotation.y = Math.PI / 2;
+            cube.position.z -= 1;
+            cube.position.x += 1;
+            cube2.rotation.y = Math.PI / 2;
+            cube3.rotation.y = Math.PI / 2;
+            cube3.position.z += 1;
+            cube3.position.x -= 1;
+
+        }
+        
+        //cube.rotation.x = Math.PI / 5;
+        //cube.rotation.y = Math.PI / 5;
+        //cube2.rotation.x = Math.PI / 5;
+        //cube2.rotation.y = Math.PI / 5;
+        
+       // cube2.position.x += 1;
+        
+        
+        scene.add( cube );
+        scene.add(cube2);
+        scene.add(cube3);
+
+        }
+
+     for (i=0; i<rows; i++)
+        {
+        
+        cube = new THREE.Mesh(geometry);
+        cube.position.x += 5
+        cube.position.z += 5
+        cube2 = new THREE.Mesh(geometry);
+        cube3 = new THREE.Mesh(geometry);
+        cube2.position.x += 6
+        cube2.position.z += 5
+        cube3.position.x += 7
+        cube3.position.z += 5
+        cube.position.y += i
+        cube2.position.y += i
+        cube3.position.y += i
+
+        if (i%2==0)
+        {
+            cube.rotation.y = Math.PI / 2;
+            cube.position.z -= 1;
+            cube.position.x += 1;
+            cube2.rotation.y = Math.PI / 2;
+            cube3.rotation.y = Math.PI / 2;
+            cube3.position.z += 1;
+            cube3.position.x -= 1;
+
+        }
+        
+        //cube.rotation.x = Math.PI / 5;
+        //cube.rotation.y = Math.PI / 5;
+        //cube2.rotation.x = Math.PI / 5;
+        //cube2.rotation.y = Math.PI / 5;
+        
+       // cube2.position.x += 1;
+        
+        
+        scene.add( cube );
+        scene.add(cube2);
+        scene.add(cube3);
+
+        }
+    for (i=0; i<rows; i++)
+        {
+        
+        cube = new THREE.Mesh(geometry);
+        cube2 = new THREE.Mesh(geometry);
+        cube3 = new THREE.Mesh(geometry);
+        cube2.position.x += 1
+        cube3.position.x += 2
+        cube.position.y += i
+        cube2.position.y += i
+        cube3.position.y += i
+        cube.position.z += 5
+        cube2.position.z += 5
+        cube3.position.z += 5
+        if (i%2==0)
+        {
+            cube.rotation.y = Math.PI / 2;
+            cube.position.z -= 1;
+            cube.position.x += 1;
+            cube2.rotation.y = Math.PI / 2;
+            cube3.rotation.y = Math.PI / 2;
+            cube3.position.z += 1;
+            cube3.position.x -= 1;
+
+        }
+        
+        //cube.rotation.x = Math.PI / 5;
+        //cube.rotation.y = Math.PI / 5;
+        //cube2.rotation.x = Math.PI / 5;
+        //cube2.rotation.y = Math.PI / 5;
+        
+       // cube2.position.x += 1;
+        
+        
+        scene.add( cube );
+        scene.add(cube2);
+        scene.add(cube3);
+
+        }
+
+//renderer.render( scene, camera );
+        run();
+    }
+
+    function run()
+    {
+        renderer.render (scene, camera);
+       // cube.rotation.y -= 0.01;
+       // cube2.rotation.y -= 0.01;
+        var x = camera.position.x;
+        var z = camera.position.z;
+        var theta = 0.01;
+        camera.position.x = x * Math.cos(theta) + z * Math.sin(theta);
+        camera.position.z = z * Math.cos(theta) - x * Math.sin(theta);
+        camera.lookAt( new THREE.Vector3(0, 0, 0) );
+
+       // camera.rotation.y += 0.01;
+        theta +=1;
+        requestAnimationFrame(run);
+    }
+    </script>
+</head>
+<body onLoad="onLoad();">
+    <div id="container"
+        style="width:500px; height:500px; background-color:#000000">
+        </div>
+        </body>
+        </html>
