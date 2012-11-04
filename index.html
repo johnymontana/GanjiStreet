@@ -81,7 +81,127 @@
 
         }
 // Render it
-        //renderer.render( scene, camera );
+        for (i=0; i<rows; i++)
+        {
+        
+        cube = new THREE.Mesh(geometry);
+        cube.position.x += 5
+        cube2 = new THREE.Mesh(geometry);
+        cube3 = new THREE.Mesh(geometry);
+        cube2.position.x += 6
+        cube3.position.x += 7
+        cube.position.y += i
+        cube2.position.y += i
+        cube3.position.y += i
+
+        if (i%2==0)
+        {
+            cube.rotation.y = Math.PI / 2;
+            cube.position.z -= 1;
+            cube.position.x += 1;
+            cube2.rotation.y = Math.PI / 2;
+            cube3.rotation.y = Math.PI / 2;
+            cube3.position.z += 1;
+            cube3.position.x -= 1;
+
+        }
+        
+        //cube.rotation.x = Math.PI / 5;
+        //cube.rotation.y = Math.PI / 5;
+        //cube2.rotation.x = Math.PI / 5;
+        //cube2.rotation.y = Math.PI / 5;
+        
+       // cube2.position.x += 1;
+        
+        
+        scene.add( cube );
+        scene.add(cube2);
+        scene.add(cube3);
+
+        }
+
+     for (i=0; i<rows; i++)
+        {
+        
+        cube = new THREE.Mesh(geometry);
+        cube.position.x += 5
+        cube.position.z += 5
+        cube2 = new THREE.Mesh(geometry);
+        cube3 = new THREE.Mesh(geometry);
+        cube2.position.x += 6
+        cube2.position.z += 5
+        cube3.position.x += 7
+        cube3.position.z += 5
+        cube.position.y += i
+        cube2.position.y += i
+        cube3.position.y += i
+
+        if (i%2==0)
+        {
+            cube.rotation.y = Math.PI / 2;
+            cube.position.z -= 1;
+            cube.position.x += 1;
+            cube2.rotation.y = Math.PI / 2;
+            cube3.rotation.y = Math.PI / 2;
+            cube3.position.z += 1;
+            cube3.position.x -= 1;
+
+        }
+        
+        //cube.rotation.x = Math.PI / 5;
+        //cube.rotation.y = Math.PI / 5;
+        //cube2.rotation.x = Math.PI / 5;
+        //cube2.rotation.y = Math.PI / 5;
+        
+       // cube2.position.x += 1;
+        
+        
+        scene.add( cube );
+        scene.add(cube2);
+        scene.add(cube3);
+
+        }
+    for (i=0; i<rows; i++)
+        {
+        
+        cube = new THREE.Mesh(geometry);
+        cube2 = new THREE.Mesh(geometry);
+        cube3 = new THREE.Mesh(geometry);
+        cube2.position.x += 1
+        cube3.position.x += 2
+        cube.position.y += i
+        cube2.position.y += i
+        cube3.position.y += i
+        cube.position.z += 5
+        cube2.position.z += 5
+        cube3.position.z += 5
+        if (i%2==0)
+        {
+            cube.rotation.y = Math.PI / 2;
+            cube.position.z -= 1;
+            cube.position.x += 1;
+            cube2.rotation.y = Math.PI / 2;
+            cube3.rotation.y = Math.PI / 2;
+            cube3.position.z += 1;
+            cube3.position.x -= 1;
+
+        }
+        
+        //cube.rotation.x = Math.PI / 5;
+        //cube.rotation.y = Math.PI / 5;
+        //cube2.rotation.x = Math.PI / 5;
+        //cube2.rotation.y = Math.PI / 5;
+        
+       // cube2.position.x += 1;
+        
+        
+        scene.add( cube );
+        scene.add(cube2);
+        scene.add(cube3);
+
+        }
+
+//renderer.render( scene, camera );
         run();
     }
 
